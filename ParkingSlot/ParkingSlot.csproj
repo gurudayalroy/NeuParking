@@ -264,6 +264,7 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Owner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -336,10 +337,11 @@
     <Content Include="Views\VehicleCheckout\Checkout.cshtml" />
     <Content Include="Views\VehicleCheckout\ParkingStatus.cshtml" />
     <Content Include="Views\OwnerDetails\OwnerInformation.cshtml" />
+    <Content Include="Views\Profile\OwnerStatus.cshtml" />
+    <Content Include="Views\Profile\RegisterOwner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Profile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
