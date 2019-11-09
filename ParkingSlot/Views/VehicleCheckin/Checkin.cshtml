@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Checkin";
+}
+<h3>Checkin Vehicle</h3>
+<h3>Scan and Upload Vehicle Number:</h3>
+<br />
+@using (Html.BeginForm("Checkin", "VehicleCheckin", 
+      FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <fieldset class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Photo">Vehicle Number Plate</label>
+            <div class="col-md-10">
+                <input type="file" name="photo" />
+            </div>
+        </div>
+        <div class="form-group">
+            &nbsp;
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Check In" class="btn" />
+            </div>
+        </div>
+    </fieldset>
+}

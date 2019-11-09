@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-ParkingSlot-20190921025550.mdf;Initial Catalog=aspnet-ParkingSlot-20190921025550;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Project\ Samples\\ParkingSlot\\ParkingSlot\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ParkingDB-Web.config Connection String" description="ParkingDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=rmsdatasource.database.windows.net;Initial Catalog=neudesicparkingdb;User ID=user1;Password=Neudesic@123" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Project\ Samples\\ParkingSlot\\ParkingSlot\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ParkingDB']/@connectionString" />
+  </parameter>
+</parameters>

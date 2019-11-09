@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ParkingSlot.DBLayer.OwnerInfo>
+@{
+    ViewBag.Title = "OwnerDetails";
+}
+
+<h2 style="background-color:cadetblue;color:brown">Owner details</h2>
+<table class="table table-bordered table-responsive table-hover">
+    <tr style="background-color:cadetblue;color:brown">
+        <th>Can owner name</th>
+        <th>Contact type </th>
+        <th>Contact</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.OwnerName</td>
+            <td>@d.ContactType</td>
+            <td>@d.ContactDetails</td>
+        </tr>
+    }
+</table>
+

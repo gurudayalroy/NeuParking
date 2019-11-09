@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ParkingSlot.DBLayer.VacantParking>
+@{
+    ViewBag.Title = "EmptySlots";
+}
+
+<h2 style="background-color:cadetblue;color:brown">Empty parking slots :</h2>
+<table class="table table-bordered table-responsive table-hover">
+    <tr style="background-color:cadetblue;color:brown">
+        <th>Parking slot </th>
+        <th>Available </th>
+        <th>Parked vehicle </th>
+        <th>Blocked by vehicle</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.parkingSlot</td>
+            <td>@d.ParkingAvailable</td>
+            <td>@d.ParkedVehicle</td>
+            <td>@d.BlockedBy</td>
+
+        </tr>
+    }
+</table>
+
