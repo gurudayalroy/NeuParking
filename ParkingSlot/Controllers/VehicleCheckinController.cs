@@ -19,21 +19,24 @@ namespace ParkingSlot.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Checkin(HttpPostedFileBase photo)
+        [HttpPost]
+        public ActionResult Checkin(HttpPostedFileBase photo, string SlotName)
         {
             var imageUrl = photo.FileName;
             var t = Task.Run(() => ImageService.MakeOCRRequest(photo));
-            
+
             t.Wait();
             var carNo = t.Result;
             TempData["CAR_NO"] = carNo.ToString();
-            var SlotName = "12";
+            //var SlotName = "12";
             DBLayer.DBConnector dbconn = new DBLayer.DBConnector();
             string str = dbconn.Checkin(carNo.ToString(), SlotName);
             if (str == "")
                 TempData["SlotAssigned"] = SlotName;
             else
                 TempData["Message"] = str;
+
+
 
             return RedirectToAction("ParkingStatus");
         }

@@ -74,7 +74,7 @@ namespace ParkingSlot.DBLayer
             }
 
         }
-        public int RegisterUserID(string email, Int32 empid)
+        public int RegisterUserID(string Name, string Email, string Phone, string VehicleNo)
         {
             
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -83,11 +83,13 @@ namespace ParkingSlot.DBLayer
                 //SqlConnection conn = new SqlConnection(connStr);
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_GetOwnerID";
+                cmd.CommandText = "dbo.sp_RegisterProfile";
                 cmd.Connection = conn;
-                cmd.Parameters.Add("@emailid", SqlDbType.NVarChar).Value = email;
-                cmd.Parameters.Add("@empid", SqlDbType.BigInt).Value = empid;
-                //cmd.Parameters.Add("@ParkingID", SqlDbType.Int).Value = ParkingID;
+                cmd.Parameters.Add("@OwnerName", SqlDbType.VarChar).Value = Name;
+                cmd.Parameters.Add("@OwnerEmail", SqlDbType.VarChar).Value = Email;
+                cmd.Parameters.Add("@OwnerPhone", SqlDbType.VarChar).Value = Phone;
+                cmd.Parameters.Add("@VehicleNum", SqlDbType.VarChar).Value = VehicleNo;
+                
                 conn.Open();
                 var data = cmd.ExecuteScalar();
                 if(data == null)

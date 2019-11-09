@@ -35,10 +35,8 @@ namespace ParkingSlot.Controllers
         {
             if (ModelState.IsValid)
             {
-                //ParkingSlot.Models.Owner db = new ParkingSlot.Models.Owner();
-                //Checkin  API Call with Vehicle No
-                //db.tblRegistrations.Add(obj);
-                //db.SaveChanges();
+                DBLayer.DBConnector dbconn = new DBLayer.DBConnector();
+                dbconn.RegisterUserID(owner.OwnerName, owner.OwnerEmail, owner.OwnerPhone, owner.VehicleNumber);
             }
             TempData["Owner_Name"] = owner.OwnerName;
             TempData["CAR_NO"] = owner.VehicleNumber;

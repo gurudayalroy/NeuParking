@@ -9,10 +9,10 @@ namespace ParkingSlot.Controllers
 {
     public class MpinController : ApiController
     {
-        public int Get(string emailid, int empid)
+        public int Get(string Name, string Email, string Phone, string VehicleNo)
         {
             DBLayer.DBConnector dbconn = new DBLayer.DBConnector();
-            return dbconn.RegisterUserID(emailid, empid);
+            return dbconn.RegisterUserID(Name, Email, Phone, VehicleNo);
 
         }
     }

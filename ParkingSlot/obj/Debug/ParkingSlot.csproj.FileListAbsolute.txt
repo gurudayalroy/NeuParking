@@ -184,7 +184,6 @@ C:\Working\ParkingSlot\ParkingSlot\bin\Microsoft.WindowsAzure.Storage.dll
 C:\Working\ParkingSlot\ParkingSlot\bin\Microsoft.Azure.KeyVault.Core.xml
 C:\Working\ParkingSlot\ParkingSlot\bin\Microsoft.WindowsAzure.Storage.pdb
 C:\Working\ParkingSlot\ParkingSlot\bin\Microsoft.WindowsAzure.Storage.xml
-E:\Hakathon\ParkingSlot\obj\Debug\ParkingSlot.csprojResolveAssemblyReference.cache
 E:\Hakathon\ParkingSlot\obj\Debug\ParkingSlot.dll
 E:\Hakathon\ParkingSlot\obj\Debug\ParkingSlot.pdb
 E:\Hakathon\ParkingSlot\bin\ApplicationInsights.config

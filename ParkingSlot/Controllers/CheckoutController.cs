@@ -9,10 +9,10 @@ namespace ParkingSlot.Controllers
 {
     public class CheckoutController : ApiController
     {
-        public string Get(int OwnerID)
+        public string Get(string vehicleNo)
         {
             DBLayer.DBConnector dbconn = new DBLayer.DBConnector();
-            string str = dbconn.CheckOut(OwnerID);
+            string str = dbconn.CheckOut(vehicleNo);
             return str;
         }
     }
