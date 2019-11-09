@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingSlot", "ParkingSlot\ParkingSlot.csproj", "{03656AE8-13F2-485E-94DF-C5A32DA2AA26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{2F662EB4-9B8D-4BA8-96E1-0CD64767EF1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{F0A97856-DD9B-4F74-88C2-29B32D9013B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{11F935F4-736F-4201-AAA2-D91A1D9ABAFC}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\ParkingSlot.json = PublishScripts\Templates\ParkingSlot.json
+		PublishScripts\Templates\ParkingSlot.param.dev.json = PublishScripts\Templates\ParkingSlot.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03656AE8-13F2-485E-94DF-C5A32DA2AA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03656AE8-13F2-485E-94DF-C5A32DA2AA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03656AE8-13F2-485E-94DF-C5A32DA2AA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03656AE8-13F2-485E-94DF-C5A32DA2AA26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0A97856-DD9B-4F74-88C2-29B32D9013B2} = {2F662EB4-9B8D-4BA8-96E1-0CD64767EF1F}
+		{11F935F4-736F-4201-AAA2-D91A1D9ABAFC} = {2F662EB4-9B8D-4BA8-96E1-0CD64767EF1F}
+	EndGlobalSection
+EndGlobal
