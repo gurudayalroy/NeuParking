@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
+
+
 namespace ParkingSlot.Controllers
 {
     public class VehicleCheckoutController : Controller
@@ -14,6 +16,8 @@ namespace ParkingSlot.Controllers
         {
             return View();
         }
+
+
 
         public ActionResult Checkout()
         {
@@ -28,6 +32,9 @@ namespace ParkingSlot.Controllers
             var carNo = t.Result;
             TempData["CAR_NO"] = carNo.ToString();
             //Checkout  API Call with Vehicle No
+            //var SlotName = "12";
+            DBLayer.DBConnector dbconn = new DBLayer.DBConnector();
+            string str = dbconn.CheckOut(carNo.ToString());
             return RedirectToAction("ParkingStatus");
         }
         public ActionResult ParkingStatus()

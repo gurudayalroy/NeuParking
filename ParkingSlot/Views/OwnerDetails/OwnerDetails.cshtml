@@ -2,21 +2,28 @@
 @{
     ViewBag.Title = "OwnerDetails";
 }
+<div class="innerPage">
 
-<h2 style="background-color:cadetblue;color:brown">Owner details</h2>
-<table class="table table-bordered table-responsive table-hover">
-    <tr style="background-color:cadetblue;color:brown">
-        <th>Car owner name</th>
-        <th>Contact type </th>
-        <th>Contact</th>
-    </tr>
-    @foreach (var d in Model)
-    {
-        <tr>
-            <td>@d.OwnerName</td>
-            <td>@d.ContactType</td>
-            <td>@d.ContactDetails</td>
-        </tr>
-    }
-</table>
-
+    <div class="section-title">
+        <h2>Owner details</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-responsive table-hover">
+                <tr>
+                    <th>Car owner name</th>
+                    <th>Contact type </th>
+                    <th>Contact</th>
+                </tr>
+                @foreach (var d in Model)
+                {
+                    <tr>
+                        <td>@d.OwnerName</td>
+                        <td>@d.ContactType</td>
+                        <td>@d.ContactDetails</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
