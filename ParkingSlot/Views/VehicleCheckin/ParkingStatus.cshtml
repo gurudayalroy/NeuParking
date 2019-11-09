@@ -4,6 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br />
-
-<h3>@ViewBag.CAR_NO Successfully Checked in to slot : @ViewBag.SlotAssigned</h3>
-<br />
+@if (@ViewBag.Message == "" || @ViewBag.Message == null)
+{
+    <h3> @ViewBag.CAR_NO Successfully Checked in to slot : @ViewBag.SlotNo</h3>
+}
+else
+{
+    <h3> @ViewBag.Message</h3>
+}
