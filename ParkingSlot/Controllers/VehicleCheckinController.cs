@@ -18,7 +18,7 @@ namespace ParkingSlot.Controllers
         {
             return View();
         }
-        [HttpPost]
+      
         [HttpPost]
         public ActionResult Checkin(HttpPostedFileBase photo, string SlotName)
         {
