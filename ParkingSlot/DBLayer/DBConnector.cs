@@ -10,7 +10,7 @@ namespace ParkingSlot.DBLayer
     public class DBConnector
     {
         public string connStr = ConfigurationManager.ConnectionStrings["ParkingDB"].ConnectionString;
-        public string Checkin(int OwnerID, string ParkingID)
+        public string Checkin(string vehicleNo, string ParkingID)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -20,7 +20,7 @@ namespace ParkingSlot.DBLayer
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_checkin_vehicle";
                 cmd.Connection = conn;
-                cmd.Parameters.Add("@OwnerID", SqlDbType.Int).Value = OwnerID;
+                cmd.Parameters.Add("@VehicleNo", SqlDbType.NVarChar).Value = vehicleNo;
                 cmd.Parameters.Add("@Parking", SqlDbType.NVarChar).Value = ParkingID;
                 conn.Open();
                 message = cmd.ExecuteScalar().ToString();

@@ -23,10 +23,18 @@ namespace ParkingSlot.Controllers
         {
             var imageUrl = photo.FileName;
             var t = Task.Run(() => ImageService.MakeOCRRequest(photo));
+            
             t.Wait();
             var carNo = t.Result;
             TempData["CAR_NO"] = carNo.ToString();
-            //Checkin  API Call with Vehicle No
+            var SlotName = "12";
+            DBLayer.DBConnector dbconn = new DBLayer.DBConnector();
+            string str = dbconn.Checkin(carNo.ToString(), SlotName);
+            if (str == "")
+                TempData["SlotAssigned"] = SlotName;
+            else
+                TempData["Message"] = str;
+
             return RedirectToAction("ParkingStatus");
         }
 
@@ -37,9 +45,14 @@ namespace ParkingSlot.Controllers
         public ActionResult ParkingStatus()
         {
             var latestImage = string.Empty;
-            if (TempData["CAR_NO"] != null)
+            if (TempData["CAR_NO"] != null && TempData["SlotAssigned"] != null)
             {
                 ViewBag.CAR_NO = Convert.ToString(TempData["CAR_NO"]);
+                ViewBag.SlotNo = Convert.ToString(TempData["SlotAssigned"]);
+            }
+            if(TempData["Message"] != null)
+            {
+                ViewBag.Message = Convert.ToString(TempData["Message"]);
             }
             return View();
         }

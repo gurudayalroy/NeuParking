@@ -16,10 +16,10 @@ namespace ParkingSlot.Controllers
         }
 
         // GET: api/Checkin/5
-        public string Get(int OwnerID, string  SlotName)
+        public string Get(string vehicleNo, string  SlotName)
         {
             DBLayer.DBConnector dbconn = new DBLayer.DBConnector();
-            string str = dbconn.Checkin(OwnerID,SlotName);
+            string str = dbconn.Checkin(vehicleNo,SlotName);
             return str;
         }
         // POST: api/Checkin
