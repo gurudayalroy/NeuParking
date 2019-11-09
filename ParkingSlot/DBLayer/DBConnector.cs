@@ -28,7 +28,7 @@ namespace ParkingSlot.DBLayer
             }
 
         }
-        public string CheckOut(int OwnerID)
+        public string CheckOut(string VehicleNo)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -38,7 +38,7 @@ namespace ParkingSlot.DBLayer
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_checkout_vehicle";
                 cmd.Connection = conn;
-                cmd.Parameters.Add("@OwnerID", SqlDbType.Int).Value = OwnerID;
+                cmd.Parameters.Add("@VehicleNo", SqlDbType.NVarChar).Value = VehicleNo;
                 //cmd.Parameters.Add("@ParkingID", SqlDbType.Int).Value = ParkingID;
                 conn.Open();
                 cmd.ExecuteNonQuery();
