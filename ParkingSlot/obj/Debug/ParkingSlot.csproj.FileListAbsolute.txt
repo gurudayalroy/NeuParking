@@ -278,4 +278,3 @@ E:\Hakathon\ParkingSlot\bin\Microsoft.Owin.Security.Google.xml
 E:\Hakathon\ParkingSlot\bin\Microsoft.Owin.Security.Twitter.xml
 E:\Hakathon\ParkingSlot\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Hakathon\ParkingSlot\bin\System.Web.Http.Owin.xml
-E:\Hakathon\ParkingSlot\obj\Debug\ParkingSlot.csprojResolveAssemblyReference.cache

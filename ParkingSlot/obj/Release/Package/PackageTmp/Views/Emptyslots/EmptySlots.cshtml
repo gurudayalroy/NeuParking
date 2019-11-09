@@ -2,24 +2,91 @@
 @{
     ViewBag.Title = "EmptySlots";
 }
+<div class="innerPage">
 
-<h2 style="background-color:cadetblue;color:brown">Empty parking slots :</h2>
-<table class="table table-bordered table-responsive table-hover">
-    <tr style="background-color:cadetblue;color:brown">
-        <th>Parking slot </th>
-        <th>Available </th>
-        <th>Parked vehicle </th>
-        <th>Blocked by vehicle</th>
-    </tr>
-    @foreach (var d in Model)
-    {
-        <tr>
-            <td>@d.parkingSlot</td>
-            <td>@d.ParkingAvailable</td>
-            <td>@d.ParkedVehicle</td>
-            <td>@d.BlockedBy</td>
+    <div class="section-title">
+        <h2>Empty parking slots</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
 
-        </tr>
-    }
-</table>
+            @*<table class="table table-bordered table-responsive table-hover">
+                    <tr style="background-color:cadetblue;color:brown">
+                        <th>Parking slot </th>
+                        <th>Available </th>
+                        <th>Parked vehicle </th>
+                        <th>Blocked by vehicle</th>
+                    </tr>
+                    @foreach (var d in Model)
+                    {
+                        <tr>
+                            <td>@d.parkingSlot</td>
+                            <td>@d.ParkingAvailable</td>
+                            <td>@d.ParkedVehicle</td>
+                            <td>@d.BlockedBy</td>
 
+                        </tr>
+                    }
+                </table>*@
+            <div class="slotLayout">
+
+
+                <div>
+                    <table style="width:100%">
+                        <tr>
+                            <th width="200px;">Parking slot:</th>
+                        </tr>
+                        <tr>
+                            <th width="200px;">Available:</th>
+                        </tr>
+                        <tr>
+                            <th width="200px;">Parked vehicle:</th>
+                        </tr>
+                        <tr>
+                            <th width="200px;">Blocked by vehicle:</th>
+                        </tr>
+                    </table>
+                </div>
+                <div style=" overflow-x:auto;">
+
+
+                    <table class="slot" style="width:100%">
+                        <tr>
+                          @*  <th width="200px;">Parking slot:</th>*@
+                            @foreach (var d in Model)
+                            {
+                                <td>@d.parkingSlot</td>
+
+                            }
+                        </tr>
+                        <tr>
+                           @* <th>Available:</th>*@
+                            @foreach (var d in Model)
+                            {
+                                <td>@d.ParkingAvailable</td>
+
+                            }
+                        </tr>
+                        <tr class="booked">
+                            @*<th>Parked vehicle:</th>*@
+                            @foreach (var d in Model)
+                            {
+                                <td>@d.ParkedVehicle</td>
+
+                            }
+                        </tr>
+                        <tr class="blocked">
+                            @*<th>Blocked by vehicle:</th>*@
+                            @foreach (var d in Model)
+                            {
+                                <td>@d.BlockedBy</td>
+
+                            }
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

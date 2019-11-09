@@ -274,6 +274,11 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\001.svg" />
+    <Content Include="Content\images\002.svg" />
+    <Content Include="Content\images\003.svg" />
+    <Content Include="Content\images\004.svg" />
+    <Content Include="Content\images\car-parking.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
